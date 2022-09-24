@@ -99,6 +99,7 @@ var knowledgeKeywords = JSON.parse('<?php echo $knowledge_keywords_json; ?>');
 var allKeywords = JSON.parse('<?php echo $all_keywords_json; ?>');
 var CitysKeywordsLength = citysKeywords.length;
 var CountryKeywordsLength = countryKeywords.length;
+var KnowledgeKeywordsLength = countryKeywords.length;
 var AllKeywordsLength = allKeywords.length;
 
 // citys news
