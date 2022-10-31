@@ -62,7 +62,7 @@ $all_keywords_json = json_encode($all_result);
         <a class="btn btn--red btn--border-inset" onclick="sankei_news_country()">産経</a>
         <a class="btn btn--red btn--border-inset" onclick="nikkei_news_country()">日経</a>
         <a class="btn btn--red btn--border-inset" onclick="tbs_news_country()">TBS</a>
-        <a class="btn btn--red btn--border-inset" onclick="tbs_news_country()">NHK</a>
+        <a class="btn btn--red btn--border-inset" onclick="nhk_news_country">NHK</a>
         <hr>
         <h2>市区町村 ガチャ</h2>
         <a class="btn btn--red btn--border-inset" onclick="google_news_citys()">Google</a>
@@ -70,7 +70,7 @@ $all_keywords_json = json_encode($all_result);
         <a class="btn btn--red btn--border-inset" onclick="sankei_news_citys()">産経</a>
         <a class="btn btn--red btn--border-inset" onclick="nikkei_news_citys()">日経</a>
         <a class="btn btn--red btn--border-inset" onclick="tbs_news_citys()">TBS</a>
-        <a class="btn btn--red btn--border-inset" onclick="tbs_news_citys()">NHK</a>
+        <a class="btn btn--red btn--border-inset" onclick="nhk_news_citys()">NHK</a>
         <hr>
         <h2>学問 ガチャ</h2>
         <a class="btn btn--red btn--border-inset" onclick="google_news_knowledge()">Google</a>
@@ -78,7 +78,7 @@ $all_keywords_json = json_encode($all_result);
         <a class="btn btn--red btn--border-inset" onclick="sankei_news_knowledge()">産経</a>
         <a class="btn btn--red btn--border-inset" onclick="nikkei_news_knowledge()">日経</a>
         <a class="btn btn--red btn--border-inset" onclick="tbs_news_knowledge()">TBS</a>
-        <a class="btn btn--red btn--border-inset" onclick="tbs_news_knowledge()">NHK</a>
+        <a class="btn btn--red btn--border-inset" onclick="nhk_news_knowledge()">NHK</a>
         <hr>
         <h2>国名 + 市区町村 + 学問 ガチャ</h2>
         <p style="font-size: 20px;"> （キーワードの比率的に、市区町村が出がち問題）</p>
@@ -87,7 +87,7 @@ $all_keywords_json = json_encode($all_result);
         <a class="btn btn--red btn--border-inset" onclick="sankei_news_all()">産経</a>
         <a class="btn btn--red btn--border-inset" onclick="nikkei_news_all()">日経</a>
         <a class="btn btn--red btn--border-inset" onclick="tbs_news_all()">TBS</a>
-        <a class="btn btn--red btn--border-inset" onclick="tbs_news_all()">NHK</a>
+        <a class="btn btn--red btn--border-inset" onclick="nhk_news_all()">NHK</a>
         <hr>
     </div>
 
@@ -105,7 +105,7 @@ var AllKeywordsLength = allKeywords.length;
 // citys news
 function google_news_citys() {
     var random_int = Math.floor( Math.random() * CitysKeywordsLength );
-    var random_keyword = "https://news.google.com/search?q=" + citysKeywords[random_int];
+    var random_keyword = "https://news.google.com/search?q=" + citysKeywords[random_int] + "&hl=ja&gl=JP&ceid=JP:ja";
     window.open(random_keyword, '_blank');
 }
 function yahoo_news_citys() {
@@ -137,7 +137,7 @@ function nhk_news_citys() {
 // county news
 function google_news_country() {
     var random_int = Math.floor( Math.random() * CountryKeywordsLength );
-    var random_keyword = "https://news.google.com/search?q=" + countryKeywords[random_int];
+    var random_keyword = "https://news.google.com/search?q=" + countryKeywords[random_int] + "&hl=ja&gl=JP&ceid=JP:ja";
     window.open(random_keyword, '_blank');
 }
 function yahoo_news_country() {
@@ -169,7 +169,7 @@ function nhk_news_country() {
 // knowledge news
 function google_news_knowledge() {
     var random_int = Math.floor( Math.random() * KnowledgeKeywordsLength );
-    var random_keyword = "https://news.google.com/search?q=" + knowledgeKeywords[random_int];
+    var random_keyword = "https://news.google.com/search?q=" + knowledgeKeywords[random_int] + "&hl=ja&gl=JP&ceid=JP:ja";
     window.open(random_keyword, '_blank');
 }
 function yahoo_news_knowledge() {
@@ -201,7 +201,7 @@ function nhk_news_knowledge() {
 // all news
 function google_news_all() {
     var random_int = Math.floor( Math.random() * AllKeywordsLength );
-    var random_keyword = "https://news.google.com/search?q=" + allKeywords[random_int];
+    var random_keyword = "https://news.google.com/search?q=" + allKeywords[random_int] + "&hl=ja&gl=JP&ceid=JP:ja";
     window.open(random_keyword, '_blank');
 }
 function yahoo_news_all() {
